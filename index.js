@@ -3,7 +3,7 @@ const express = require("express");
 
 const app = express();
 const cors = require('cors');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
 
 // let allowedOrigins = [
 //   'https://localhost:3000',
