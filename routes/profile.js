@@ -10,7 +10,7 @@ router.get("/:id", (req, res) => {
         method: "GET",
         url: `https://discord.com/api/v9/users/${userId}/profile`,
         headers: {
-            "authorization": 'OTMyODE3MjE3NjE0MTE4OTQz.GhnCt1.frQT0MbBTLG-bHkRtN-k8O17mR3pJAjtjRYZl8',
+            "authorization": process.env.TOKEN,
         },
     }).then(response => {
         return res.send(response.data);
