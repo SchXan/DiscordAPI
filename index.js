@@ -19,6 +19,7 @@ const { profile, avatar, banner, badge } = require("./routes/routes");
 // Default route
 app.get("/", (req, res) => {
   res.send("Selamat datang di API untuk mendapatkan profil, avatar, dan spanduk pengguna Discord, gunakan /api/profile/:id, /api/avatar/:id atau /api/banner/:id untuk mendapatkan informasi");
+  console.log(process.env.TOKEN)
 });
 app.use('/api/profile', profile);
 app.use('/api/avatar', avatar);
