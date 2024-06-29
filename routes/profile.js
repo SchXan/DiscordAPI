@@ -10,14 +10,14 @@ router.get("/:id", (req, res) => {
         method: "GET",
         url: `https://discord.com/api/v9/users/${userId}/profile`,
         headers: {
-            "authorization": process.env.TOKEN,
+            "authorization": 'OTMyODE3MjE3NjE0MTE4OTQz.GhnCt1.frQT0MbBTLG-bHkRtN-k8O17mR3pJAjtjRYZl8',
         },
     }).then(response => {
         return res.send(response.data);
     })
     .catch(error => {
-        console.error("Error en la petición:", error.message);
-        return res.status(500).send("Error al obtener el perfil del usuario");
+        console.error("Kesalahan permintaan:", error.message);
+        return res.status(500).send("Terjadi kesalahan saat mendapatkan profil pengguna");
     });
 });
 
